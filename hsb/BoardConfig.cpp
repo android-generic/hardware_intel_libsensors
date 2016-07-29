@@ -54,7 +54,7 @@ int BoardConfig::sensorListSize()
     const char *key = "persist.sys.sensors.iio.present";
     char value[PROPERTY_VALUE_MAX];
 
-    if (property_get(key, value, "")) {
+    if (property_get(key, value, "1")) {
         if (strncmp(value, "1", 1) == 0) {
             ALOGI("IIO sensor hub detected previously; assuming it is still attached.");
             return ARRAY_SIZE(sSensorList);
