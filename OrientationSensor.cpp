@@ -83,9 +83,9 @@ int OrientationSensor::processEvent(unsigned char *data, size_t len)
     //
     // These conversions produce behavior identical to the Nexus 7,
     // Galaxy Nexus and Google Edition GS4:
-    mPendingEvent.data[0] = 360.0 - vals[2];
-    mPendingEvent.data[1] = -vals[0];
-    mPendingEvent.data[2] = -vals[1];
+    mPendingEvent.data[0] = (360.0 - (vals[2]/100.0));
+    mPendingEvent.data[1] = (-vals[0]) / 100.0;
+    mPendingEvent.data[2] = (-vals[1]) / 100.0;
 
     ALOGV("orient %f %f %f\n", mPendingEvent.data[0], mPendingEvent.data[1], mPendingEvent.data[2]);
 
