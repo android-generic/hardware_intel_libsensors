@@ -23,7 +23,7 @@
 #include <sys/epoll.h>
 #include <sys/ioctl.h>
 #include <sys/socket.h>
-#include <utils/Log.h>
+#include <log/log.h>
 #include <hardware/sensors.h>
 #include <linux/ioctl.h>
 #include "control.h"

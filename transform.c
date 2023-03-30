@@ -16,7 +16,7 @@
 
 #include <stdlib.h>
 #include <math.h>
-#include <utils/Log.h>
+#include <log/log.h>
 #include <cutils/properties.h>
 #include <hardware/sensors.h>
 #include "calibration.h"
